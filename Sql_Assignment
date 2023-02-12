@@ -1,5 +1,4 @@
 -- Creating a database.
-
 CREATE DATABASE SQL_ASSIGNMENT;
 USE SQL_ASSIGNMENT;
 
@@ -24,7 +23,7 @@ INSERT INTO EMPLOYEES VALUES
     (4,'W','Female','IT');
 	
 
--- Chacking the condition given.
+-- Checking the condition given.
 INSERT INTO EMPLOYEES VALUES(8,'W','Ab','IT');
 INSERT INTO EMPLOYEES VALUES(11,'Y','Female',NULL);
 
@@ -34,12 +33,15 @@ department:
 SELECT IFNULL(DEPARTMENT,'Dept not assigned') AS DEPARTMENT,
     COUNT(CASE WHEN UPPER(GENDER)='Male' THEN 1 END) AS 'No of male',
     COUNT(CASE WHEN UPPER(GENDER)='Female' THEN 1 END) AS 'No of Female'
-FROM EMPLOYEES GROUP BY DEPARTMENT;
+FROM EMPLOYEES
+GROUP BY DEPARTMENT
+ORDER BY DEPARTMENT;
 
 
 
 
 Question-2:
+
 
 
 
@@ -87,6 +89,7 @@ FROM
 Question-3:
 
 
+
 -- Creating a table test.
 CREATE TABLE TEST (
 	CANDIDATE_ID INT NOT NULL UNIQUE,	
@@ -111,6 +114,7 @@ GROUP BY MARKS;
 
 
 Question-4:
+
 
 
 -- Creating a table for email ids.
